@@ -33,7 +33,10 @@ dessert = ["ice cream", "yogurt", "cake", "jelly"]
 print (menu_items)
 
 # Create a list of item prices
-item_prices = [{"snacks": 
+item_prices = [{"snacks": 2.36, 1.99, 2.00, 3}, {"meals": 1.22, 2.33, 1.11, 2.20}, 
+               {"drinks": 1.50, 3.33, 4.00, 2.50}, "dessert": 2.01, 2.99, 1.54,  2.20}]
+
+print (item_prices)
 
 # Prompt customer to enter their selection from the menu saving it as variable menu_selection
 customer_orders.append(menu_selection)
