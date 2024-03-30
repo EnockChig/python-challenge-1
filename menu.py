@@ -1,32 +1,48 @@
 # Create an empty list to store customer orders
 customer_orders = []
 
-# Example of adding orders to the list
-[
+# Create the sub menu and save as empty list
+menu_selection = [
     {
-    "Item name": "Apple",
-    "Price": 1.25,
-    "Quantity": 3
-},
+    "Item name": "string",
+    "Price": float,
+    "Quantity": int
+    },
 
-{
-    "Item name": "Banana",
-    "Price": 0.75,
-    "Quantity": 2
+    {
+    "Item name": "string",
+    "Price": float,
+    "Quantity": int
     },
 ]
 
-# Adding orders to the list
-customer_orders.append(order1)
-customer_orders.append(order2)
+print (menu_selection)
 
 
+# Create a tuple containing the names of menu_items:
+# snacks, meals, drinks, and dessert.
+menu_items = ("snacks", "meals", "drinks", "dessert")
+
+#Create a list of the menu items
+
+snacks = ["chips", "cookies", "nuts", "jerky"]
+meals = ["pasta", "jambalaya", "burgers", "steak"]
+drinks = ["juice", "wine", "water", "beer"]
+dessert = ["ice cream", "yogurt", "cake", "jelly"]
+
+print (menu_items)
+
+# Create a list of item prices
+item_prices = [{"snacks": 
+
+# Prompt customer to enter their selection from the menu saving it as variable menu_selection
+customer_orders.append(menu_selection)
 
 # Initializations
 place_order = True
 
 while True:
-    # Printing the sub-menu
+    # Printing the customer order
     for num, item in menu_items.items():
         print(f"{num}: {item['Item name']} - ${item['Price']}")
 
