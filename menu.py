@@ -60,7 +60,6 @@ while True:
     menu_selection = int(menu_selection)
     if menu_selection not in menu_items:
         print("Error: Selection not found in the menu.")
-        continue
     
     # Get the item name from the menu_items dictionary and store it as a variable
     item_name = menu_items[menu_selection]["Item name"]
