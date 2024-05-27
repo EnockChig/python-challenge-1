@@ -54,9 +54,6 @@ menu = {
 # menu item name, item price, and quantity ordered
 order_list = []
 
-for order in order_list:
-    print(f"Item: {order['Item name']} | Price: ${order['Price']} | Quantity: {order['Quantity']}")
-
 # Launch the store and present a greeting to the customer
 print("Welcome to the variety food truck.")
 
@@ -131,7 +128,7 @@ while place_order:
                 # 4. Check if the menu selection is in the menu items
                 if customer_converted_input in menu_items.keys():
                     # Store the item name as a variable
-                    menu_item_name = menu_items[customer_converted_input]["Item_name"]
+                    menu_item_name = menu_items[customer_converted_input]["Item name"]
                     menu_item_price = menu_items[customer_converted_input]["Price"]
 
 
@@ -171,7 +168,7 @@ while place_order:
         keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         #check if input is yes or no using match case statements
-        match keep_ordering.lower(): #yes yes o
+        match keep_ordering.lower(): 
              case 'yes' | 'y': 
                 place_order=True
             
@@ -201,17 +198,19 @@ for order in order_list:
   
     # 8. Calculate the number of spaces for formatted printing
     num_item_spaces_name = 26 - len(item_name)
-    num_item_spaces_name = 26 - len(price)
-    num_item_spaces_name = 26 - len(quantity)
+    num_item_spaces_price = 8 - len(str(price))
+    num_item_spaces_quantity = 5 - len(str(quantity))
+   
     # 9. Create space strings
     space_item_name =num_item_spaces_name* " "
-    space_price =num_item_spaces_name* " "
-    space_quantity =num_item_spaces_name* " "
+    space_price = num_item_spaces_price* " "
+    space_quantity = num_item_spaces_quantity* " "
+
     # 10. Print the item name, price, and quantity
-    print(f"Item: {item_name}{space_item_name}, Price: ${price}, Quantity: {quantity}")
+    print(f" {item_name}{space_item_name}${price}{space_price}{quantity}")
 
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 total_cost =  sum(order["Price"] * order["quantity"] for order in order_list)
-print("Total cost of the order: $%.2f % total_cost")
+print(f"Total cost of the order: ${total_cost:.2f}")
